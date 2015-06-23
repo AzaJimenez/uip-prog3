@@ -28,6 +28,10 @@ while opc < 5:
 
     elif (opc == 4):
         print ("\n***Su selección ha sido buscar números telefónicos***\n")
-        print("El número es: ", directorio[input("Nombre: ")])
+
+        if not directorio:
+            print ("El directorio no contiene datos, no hay elementos que mostrar\n")
+        else:
+            print("El número es: ", directorio[input("Nombre: ")])
 
         opc == 6
