@@ -1,13 +1,14 @@
+
 list_sup = []
 
 opc = 0
 
 while opc < 4:
 
-    print ("\t\t\t\tStartUP ABC\n\t\t\tLISTA DE SUPERMERCADO\n\t\t\t")
+    """print ("\t\t\t\tStartUP ABC\n\t\t\tLISTA DE SUPERMERCADO\n\t\t\t")
     print ("\t", "1. Agregar elementos a su lista de supermercado")
     print ("\t", "2. Eliminar elementos de su lista de supermercado")
-    print ("\t", "3. Ver los elementos existentes en su lista de supermercado\n")
+    print ("\t", "3. Ver los elementos existentes en su lista de supermercado\n")"""
 
     opc = int(input("Indique la acción que desea realizar: "))
 
