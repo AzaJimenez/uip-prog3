@@ -1,0 +1,51 @@
+#:import FallOutTransition kivy.uix.screenmanager.FallOutTransition
+
+
+ScreenManager:
+	transition: FallOutTransition()
+	nom:""+nombre.text
+	Screen:
+		name: 'principal'
+	    BoxLayout:
+	        orientation:'vertical'
+	        GridLayout:
+	            cols: 2
+	            rows: 1
+	            Label:
+	                text: '[b]Nombre:[/b]'
+	                markup: True
+	                font_size: 40
+	                font_name: 'snap____.ttf'
+	            TextInput:
+	                id: nombre
+	                font_size: 40
+	                font_name: 'snap____.ttf'
+	                color: (0, 0, 128, 0.8)
+	                multiline: False
+	                padding: [10, 0.5 * (self.height - self.line_height)]
+			Button:
+                text: '[b]Siguiente[/b]'
+                markup: True
+                font_size: 40
+                font_name: 'papyrus.ttf'
+                background_color: (0, 0, 128, 0.8)
+                on_press: root.current = 'siguiente'
+	Screen:
+		name: 'siguiente'
+		BoxLayout:
+			orientation: 'vertical'
+			GridLayout:
+	            cols: 2
+	            rows: 1
+				Label:
+					text: 'Hola, '+root.nom
+					font_size: 40
+	                font_name: 'snap____.ttf'
+					color: (114, 0, 0, 1)
+			Button:
+	            text: '[b]Atras[/b]'
+	            markup: True
+                font_size: 40
+                font_name: 'papyrus.ttf'
+	            background_color: (255, 0, 0, 1)
+	            on_press: root.current = 'principal'
